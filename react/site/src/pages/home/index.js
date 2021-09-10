@@ -11,12 +11,12 @@ const api = new Api();
 export default function Index() {
     return (
 
-          
-               
-                    <NovoAluno>
+           <Menu>
+               <Cabecalho/>
+                <NovoAluno>
 
-                    </NovoAluno>
-           
+               </NovoAluno>
+           </Menu>
             
         
     )
