@@ -1,13 +1,12 @@
 import styled from 'styled-components'
 
 const NovoAluno = styled.div`
-
-    display: flex;  
-    flex-direction: column;
-    background-color: #ffffff;
-    padding: 1.5em;
-    margin: 2em 1.8em;
-    box-shadow: 0px 0px 4px 1px rgba(186, 186, 186, 0.25);
+display: flex;  
+flex-direction: column;
+background-color: #ffffff;
+padding: 1.5em;
+margin: 2em 1.8em;
+box-shadow: 0px 0px 4px 1px rgba(186, 186, 186, 0.25);
 
 .cab-aluno {
     display: flex;
@@ -115,11 +114,6 @@ cursor: pointer;
 
 .cadastrar button:hover {
     background-color: #FF00FF;
-}
-
-.cab-matriculados {
-    display: flex;  
-    flex-direction: row;
 }
 `
 

@@ -1,6 +1,6 @@
 import { Cabecalho } from './styled'
 
-export default function Index1(){
+export default function Index(){
     return (
         <Cabecalho> 
         <div class="cabecalho-esq">

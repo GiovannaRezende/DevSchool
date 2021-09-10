@@ -1,6 +1,6 @@
 import { NovoAluno } from './styled'
 
-export default function Index2() {
+export default function Index() {
     return (
         <NovoAluno>
             <div class="cab-aluno">
