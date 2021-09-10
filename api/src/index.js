@@ -37,11 +37,9 @@ app.post('/matricula', async (req, resp) => {
 
 app.put('/matricula/:id', async (req, resp) => {
     try {
+
+        let { aluno, chamada, curso, turma } = req.body;
         let id = req.params.id;
-        let aluno = req.body.aluno;
-        let chamada = req.body.chamada;
-        let curso = req.body.curso;
-        let turma = req.body.turma;
 
         let r = await db.tb_matricula.update(
             {

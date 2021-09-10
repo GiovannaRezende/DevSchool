@@ -58,9 +58,6 @@ font: 700 1em Roboto;
     color: white;
 }
 
-.seta-baixo {
-
-}
 
 .box4 {
     display: flex;  
@@ -285,9 +282,6 @@ cursor: pointer;
     padding: 0em 0em .7em 0em;
 }
 
-.tabela {
-    
-}
 
 .linha-principal {
 background-color: #986CDF;
