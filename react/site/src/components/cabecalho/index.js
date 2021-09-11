@@ -1,8 +1,8 @@
-import { Cabecalho } from './styled'
+import { Container } from './styled'
 
 export default function Index(){
     return (
-        <Cabecalho> 
+        <Container> 
         <div class="cabecalho-esq">
             <div class="foto-perfil"><img src="/assets/images/perfil.svg" alt=""/></div>
             <div class="circulo"><img src="/assets/images/circulo.svg" alt=""/></div>
@@ -12,7 +12,7 @@ export default function Index(){
             <div class="recarregar"><button><img src="/assets/images/recarregar.svg" alt=""/></button></div>
             <div class="sair"><button><img src="/assets/images/sair.svg" alt=""/></button></div>
         </div>
-        </Cabecalho>
+        </Container>
     )
 }
 

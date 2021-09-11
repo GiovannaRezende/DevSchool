@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Menu = styled.div`
+const Container = styled.div`
 background-color: #2B3031;
 padding: 1em 0em;
 height: 100vh;
@@ -60,4 +60,4 @@ height: 100vh;
     }
 `
 
-export { Menu }
+export { Container }

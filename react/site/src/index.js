@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import ContainerCabecalho from './components/cabecalho/index';
+
+import Routes from './routes'
 
 ReactDOM.render(
   <React.StrictMode>
-   <ContainerCabecalho/>
+   <Routes />
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-
