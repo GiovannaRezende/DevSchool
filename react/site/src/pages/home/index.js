@@ -39,15 +39,19 @@ export default function Index() {
             
             if (!nome || nome.replace === '' )
             return toast.error('O campo aluno deve ser preenchido!'); 
+            loading.current.complete();
        
             if ( nome.length < 4)
             return toast.error('O campo nome deve ser maior que 4 caracteres!'); 
+            loading.current.complete();
        
             if (chamada <= 0 )
             return toast.error('O número de chamada deve ser positivo e maior que 0!'); 
+            loading.current.complete();
        
             if (!chamada || chamada.replace === '')
             return toast.error('O campo chamada é obrigatório!');
+            loading.current.complete();
             
             if(chamada != parseInt(chamada))
             return toast.error('O campo chamada aceita apenas números!');
@@ -55,9 +59,11 @@ export default function Index() {
 
             if(curso.length < 4)
             return toast.error('O campo curso deve ser maior que 4 caracteres!');
+            loading.current.complete();
 
             if(turma.length < 4)
             return toast.error('O campo turma deve ser maior que 4 caracteres!');
+            loading.current.complete();
 
         let r = await api.inserir(nome, chamada, curso, turma);
         if(r.erro) {
