@@ -53,9 +53,12 @@ export default function Index() {
             return toast.error('O campo chamada é obrigatório!');
             loading.current.complete();
             
-            if(chamada != parseInt(chamada))
+            ///if(chamada !== parseInt(chamada))
+            ///return toast.error('O campo chamada aceita apenas números!');
+            ///loading.current.complete();
+
+            if(chamada === NaN)
             return toast.error('O campo chamada aceita apenas números!');
-            loading.current.complete();
 
             if(curso.length < 4)
             return toast.error('O campo curso deve ser maior que 4 caracteres!');
