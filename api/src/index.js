@@ -20,7 +20,7 @@ app.post('/matricula', async (req, resp) => {
     try {
         let g = req.body;
 
-        let m = await db.tb_matricula.findOne({ where: { nm_aluno: g.aluno }});
+        let m = await db.tb_matricula.findOne({ where: { nr_chamada: g.chamada, nm_turma: g.turma }});
         if (m != null)
             return resp.send({ erro: 'Aluno já existe!' });
 

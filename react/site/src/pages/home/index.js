@@ -36,13 +36,36 @@ export default function Index() {
        loading.current.continuousStart();
 
         if(idAlterando === 0) {
+            
+            if (!nome || nome.replace === '' )
+            return toast.error('O campo aluno deve ser preenchido!'); 
+       
+            if ( nome.length < 4)
+            return toast.error('O campo nome deve ser maior que 4 caracteres!'); 
+       
+            if (chamada <= 0 )
+            return toast.error('O número de chamada deve ser positivo e maior que 0!'); 
+       
+            if (!chamada || chamada.replace === '')
+            return toast.error('O campo chamada é obrigatório!');
+            
+            if(chamada != parseInt(chamada))
+            return toast.error('O campo chamada aceita apenas números!');
+            loading.current.complete();
+
+            if(curso.length < 4)
+            return toast.error('O campo curso deve ser maior que 4 caracteres!');
+
+            if(turma.length < 4)
+            return toast.error('O campo turma deve ser maior que 4 caracteres!');
+
         let r = await api.inserir(nome, chamada, curso, turma);
         if(r.erro) {
             toast.error(`${r.erro}`); 
             loading.current.complete();
         }
         else {
-            toast.success('Auno inserido!');
+            toast.success('Aluno inserido!');
             loading.current.complete();
         }
     } else {
@@ -53,6 +76,7 @@ export default function Index() {
             toast.success('Aluno alterado!');
             loading.current.complete();
         }
+
     }
         limparCampos();
         listar();
@@ -70,7 +94,7 @@ export default function Index() {
         loading.current.continuousStart();
         confirmAlert({
             title: 'Remover aluno',
-            message: `Tem certeza que deseja remover o aluno ${id} ?`,
+            message: `Tem certeza que deseja remover o aluno ${id}?`,
             buttons: [
                 {
                     label: 'Sim',
@@ -79,7 +103,7 @@ export default function Index() {
                         if(r.erro)
                             toast.error(`${r.erro}`);
                         else {
-                            toast.dark('Aluno removido!');
+                            toast.success('Aluno removido!');
                             listar();
                             
                         }
