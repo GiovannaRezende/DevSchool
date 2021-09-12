@@ -3,7 +3,8 @@ import styled from 'styled-components'
 const Container = styled.div`
 background-color: #2B3031;
 padding: 1em 0em;
-height: 100vh;
+position: sticky;
+top: 0px;
     
     .box1 {
         display: flex;  

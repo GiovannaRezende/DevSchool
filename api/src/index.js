@@ -15,19 +15,20 @@ app.get('/matricula', async (req, resp) => {
     }
 })
 
+
 app.post('/matricula', async (req, resp) => {
     try {
-        let matriculaParam = req.body;
+        let g = req.body;
 
-        let m = await db.tb_matricula.findOne({ where: { nm_aluno: matriculaParam.aluno } });
+        let m = await db.tb_matricula.findOne({ where: { nm_aluno: g.aluno }});
         if (m != null)
             return resp.send({ erro: 'Aluno já existe!' });
 
         let r = await db.tb_matricula.create({
-            nm_aluno: matriculaParam.aluno,
-            nr_chamada: matriculaParam.chamada,
-            nm_curso: matriculaParam.curso,
-            nm_turma: matriculaParam.turma
+            nm_aluno: g.aluno,
+            nr_chamada: g.chamada,
+            nm_curso: g.curso,
+            nm_turma: g.turma
         })
         resp.send(r);
     } catch (e) {
@@ -38,15 +39,15 @@ app.post('/matricula', async (req, resp) => {
 app.put('/matricula/:id', async (req, resp) => {
     try {
 
-        let { aluno, chamada, curso, turma } = req.body;
         let id = req.params.id;
-
+        let g = req.body;
+        
         let r = await db.tb_matricula.update(
             {
-                nm_aluno: aluno,
-                nr_chamada: chamada,
-                nm_curso: curso,
-                nm_turma: turma
+                nm_aluno: g.aluno,
+                nr_chamada: g.chamada,
+                nm_curso: g.curso,
+                nm_turma: g.turma
             },
             {
                 where: { id_matricula: id }

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 const Conteudo = styled.div `
+height: 100vh;
 
 .novo-aluno {
 display: flex;  
@@ -134,6 +135,9 @@ flex-direction: row;
     margin: .3em 1.9em;
     box-shadow: 0px 0px 4px 1px rgba(186, 186, 186, 0.25);
     width: 76vw;
+    overflow: hidden;
+    overflow-y: scroll;
+    max-height: 300px;
 }
 
 .titulo2 {
@@ -142,47 +146,39 @@ flex-direction: row;
     padding: 0em 0em .7em 0em;
 }
 
+table {
+    border-collapse: collapse; 
+}
 
 .linha-principal {
-background-color: #986CDF;
-color: white;
-font: 500 .8em Roboto;
-padding: 1em;
-align-items: center;
-}
-
-.linha-tp1 {
-    background-color: #f5f5f5;
-    color: #6D6868;
+    background-color: #986CDF;
+    color: white;
     font: 500 .8em Roboto;
-    text-align: center;
-    padding: 1em;
-    
+    height: 4em;
+    align-items: center;
 }
 
-.linha-tp2 {
+.linha-branca {
     background-color: #ffffff;
     color: #6D6868;
     font: 500 .8em Roboto;
     text-align: center;
-    padding: 1em;
+    height: 4em;
 }
 
-.campos {
-    padding: 1em;
-
-}
-
-.linhas {
-    padding: 1em;
+.linha-cinza {
+    background-color: #f5f5f5;
+    color: #6D6868;
+    font: 500 .8em Roboto;
+    text-align: center;
+    height: 4em;
 }
 
 .botoes button {
     background-color: #565656;
     border: none;
-    border-radius: 2em;
-    padding: .6em;
-    align-items: center;
+    border-radius: 5em;
+    padding: .7em;
     cursor: pointer;
 }
 
@@ -190,10 +186,15 @@ align-items: center;
     background-color: #3C3939;
 }
 
-table {
-    border-collapse: collapse; 
+.botoes > button {
+    visibility: hidden;
 }
 
+tr:hover {
+    .botoes > button {
+    visibility: visible;
+    }
+}
 `
 
 const Container = styled.div `

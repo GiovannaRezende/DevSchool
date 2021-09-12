@@ -4,11 +4,11 @@ const Container = styled.div`
 display: flex;  
 flex-direction: row;
 background-color: #ffffff;
-padding: 1em;
+padding: .8em;
 justify-content: space-between;
 margin: 0em 0em 1em 0em;
 box-shadow: 0px 0px 4px 1px rgba(186, 186, 186, 0.25);
-width: 80.5vw;
+width: 100%;
 
 .cabecalho-esq {
     display: flex;  
@@ -22,8 +22,8 @@ padding: 0em .3em;
 
 .circulo img {
     position:absolute; 
-    top: 18px; 
-    left: 19.4em;
+    top: 10px; 
+    left: 19em;
 }
 
 .nome-prof {
@@ -45,7 +45,7 @@ padding: 0em .3em;
     background-color: #986CDF;
     border-radius: 3em;
     border: none;
-    padding: .8em .6em;
+    padding: .6em .6em;
     margin-right: .3em;
     cursor: pointer;
 }
@@ -58,8 +58,9 @@ padding: 0em .3em;
     background-color: #986CDF;
     border-radius: 3em;
     border: none;
-    padding: .6em;
+    padding: .4em .6em;
     cursor: pointer;
+    justify-content: center;
 }
 
 .sair button:hover {

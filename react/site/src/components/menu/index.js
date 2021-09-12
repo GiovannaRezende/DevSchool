@@ -3,17 +3,17 @@ import { Container } from './styled'
 export default function Index() {
     return (
         <Container>
-            <div class="box1">
-                <div class="icone-dev"><img src="/assets/images/livro.svg" alt=""/></div>
-                <div class="dev-school">Dev<span>School</span></div>
+            <div className="box1">
+                <div className="icone-dev"><img src="/assets/images/livro.svg" alt=""/></div>
+                <div className="dev-school">Dev<span>School</span></div>
             </div>
-            <div class="box2">oi</div>
-            <div class="box3">
-                <div class="texto-box3">Gerenciamento</div>
-                <div class="seta-baixo"><img src="/assets/images/seta-baixo.svg" alt=""/></div>
+            <div className="box2">oi</div>
+            <div className="box3">
+                <div className="texto-box3">Gerenciamento</div>
+                <div className="seta-baixo"><img src="/assets/images/seta-baixo.svg" alt=""/></div>
             </div>
-            <div class="box4">
-                <div class="texto-box4">Alunos</div>
+            <div className="box4">
+                <div className="texto-box4">Alunos</div>
             </div>  
         </Container>
     )
