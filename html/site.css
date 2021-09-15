@@ -30,8 +30,8 @@ padding: 0em .4em;
 }
 
 .dev-school {
-color: #EA10C7;
-font: 700 1em Roboto;
+    color: #EA10C7;
+    font: 700 1em Roboto;
 }
 
 .dev-school span {
@@ -51,7 +51,7 @@ font: 700 1em Roboto;
     padding: .9em 2em;
     align-items: center;
     font: 500 1em Roboto;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
 .texto-box3 {

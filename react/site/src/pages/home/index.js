@@ -41,7 +41,7 @@ export default function Index() {
             return toast.error('O campo aluno deve ser preenchido!'); 
             loading.current.complete();
        
-            if ( nome.length < 4)
+            if (nome.length < 4)
             return toast.error('O campo nome deve ser maior que 4 caracteres!'); 
             loading.current.complete();
        
@@ -135,7 +135,6 @@ export default function Index() {
         setCurso(item.nm_curso);
         setTurma(item.nm_turma);
         setIdAlterando(item.id_matricula);
-
         
     }
     
